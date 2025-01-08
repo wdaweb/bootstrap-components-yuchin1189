@@ -6,7 +6,7 @@
     <title>黑屏真有趣</title>
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
     <style>
-      .carousel01 {
+      .carouselExampleIndicators {
         width: 100vw;
       }
 
@@ -16,7 +16,7 @@
       }
 
       @media (min-width: 768px) {
-        #carousel01 {
+        #carouselExampleIndicators {
           height: 100vh;
 
           .carousel-inner {
@@ -44,10 +44,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav
-      class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
-      data-bs-theme="dark"
-    >
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">黑屏真有趣</a>
         <button
@@ -63,16 +60,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">黑屏精選</a>
-            <a class="nav-link" href="#">週邊景點</a>
-            <a class="nav-link" href="#">交通位置</a>
-            <a class="nav-link disabled" aria-disabled="true">拍攝故事</a>
+            <a class="nav-link" aria-current="page" href="#carousel01">精選照片</a>
+            <a class="nav-link" href="#cards">三張卡片</a>
+            <a class="nav-link" href="#g-maps">交通位置</a>
+            <a class="nav-link" href="#contact">聯絡我們</a>
           </div>
         </div>
       </div>
     </nav>
     <!-- carousel -->
-    <div id="carousel01" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
         <button
           type="button"
@@ -82,18 +79,8 @@
           aria-current="true"
           aria-label="Slide 1"
         ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -106,37 +93,23 @@
           <img src="https://picsum.photos/id/2/1920/1080" class="d-block" />
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <!-- 3 cards -->
-    <div class="container-md px-5">
+    <div id="cards" class="container-md px-5">
       <div class="mt-3 mb-3 mt-lg-5 mb-lg-5">
-        <div
-          class="row row-cols-1 row-cols-lg-3 g-4 min-vh-100 align-content-center"
-        >
+        <div class="row row-cols-1 row-cols-lg-3 g-4 min-vh-100 align-content-center">
           <div class="col">
             <div class="card">
-              <img
-                src="https://picsum.photos/id/4/1920/1080"
-                class="card-img-top"
-              />
+              <img src="https://picsum.photos/id/4/1920/1080" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">黑暗中的寧靜</h5>
                 <p class="card-text">
@@ -147,10 +120,7 @@
           </div>
           <div class="col">
             <div class="card">
-              <img
-                src="https://picsum.photos/id/5/1920/1080"
-                class="card-img-top"
-              />
+              <img src="https://picsum.photos/id/5/1920/1080" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">靜謐的黑色世界</h5>
                 <p class="card-text">
@@ -161,10 +131,7 @@
           </div>
           <div class="col">
             <div class="card">
-              <img
-                src="https://picsum.photos/id/6/1920/1080"
-                class="card-img-top"
-              />
+              <img src="https://picsum.photos/id/6/1920/1080" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">無聲的純粹空間</h5>
                 <p class="card-text">
@@ -178,33 +145,21 @@
     </div>
     <!-- pic & text combo -->
     <div class="row bg-body-tertiary">
-      <img
-        src="https://picsum.photos/300/200/?random=10"
-        class="h-50 col-lg-6 img-fluid"
-      />
+      <img src="https://picsum.photos/300/200/?random=10" class="h-50 col-lg-6 img-fluid" />
       <div class="h-50 col-lg-6 d-flex justify-content-center flex-column p-5">
         <h2>酷酷的無關圖文一號</h2>
         <p>彷彿強化排名，幫助辦理電影南方具備我看加拿大貼布高雄，實力哪些。</p>
       </div>
     </div>
     <div class="row bg-body-tertiary">
-      <img
-        id="img_switch_order"
-        src="https://picsum.photos/300/200/?random=1"
-        class="h-50 col-lg-6 img-fluid"
-      />
-      <div
-        id="text_switch_order"
-        class="h-50 col-lg-6 d-flex justify-content-center flex-column p-5"
-      >
+      <img id="img_switch_order" src="https://picsum.photos/300/200/?random=1" class="h-50 col-lg-6 img-fluid" />
+      <div id="text_switch_order" class="h-50 col-lg-6 d-flex justify-content-center flex-column p-5">
         <h2>酷酷的無關圖文二號</h2>
-        <p>
-          趕緊畫面門口像是，好多戰爭知道各種我現在收集財富眼神法院笑話統計，具備昨天有意評論家電種類。
-        </p>
+        <p>趕緊畫面門口像是，好多戰爭知道各種我現在收集財富眼神法院笑話統計，具備昨天有意評論家電種類。</p>
       </div>
     </div>
     <!-- google maps fluid -->
-    <section style="height: 100vh">
+    <section id="g-maps" style="height: 100vh">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2852.470559898714!2d121.42106401922996!3d25.044019456535505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1736254510645!5m2!1szh-TW!2stw"
         class="w-100 h-100"
@@ -216,12 +171,11 @@
     </section>
     <!-- form -->
     <div
+      id="contact"
       class="form_container container-fluid d-flex flex-column justify-content-around align-content-center"
       style="height: 100vh"
     >
-      <form
-        class="w-50 m-auto d-flex flex-column justify-content-around align-content-center"
-      >
+      <form class="w-50 m-auto d-flex flex-column justify-content-around align-content-center">
         <h2 class="m-auto mb-2">聯絡我們</h2>
         <p class="m-auto mb-5">
           想要成為看著黑屏中數位裝置的裝忙圖庫臨演嗎？
@@ -245,41 +199,16 @@
           <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
           <div class="col-sm-10">
             <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="gridRadios"
-                id="gridRadios1"
-                value="option1"
-                checked
-              />
-              <label class="form-check-label" for="gridRadios1">
-                這是選項一</label
-              >
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked />
+              <label class="form-check-label" for="gridRadios1"> 這是選項一</label>
             </div>
             <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="gridRadios"
-                id="gridRadios2"
-                value="option2"
-              />
-              <label class="form-check-label" for="gridRadios2"
-                >這是選項二</label
-              >
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
+              <label class="form-check-label" for="gridRadios2">這是選項二</label>
             </div>
             <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="gridRadios"
-                id="gridRadios3"
-                value="option3"
-              />
-              <label class="form-check-label" for="gridRadios3"
-                >這是選項三</label
-              >
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" />
+              <label class="form-check-label" for="gridRadios3">這是選項三</label>
             </div>
           </div>
         </fieldset>
@@ -287,9 +216,7 @@
           <div class="col-sm-10 offset-sm-2">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="gridCheck1" />
-              <label class="form-check-label" for="gridCheck1">
-                勾此選項，將不會收到電子報或更多消息
-              </label>
+              <label class="form-check-label" for="gridCheck1"> 勾此選項，將不會收到電子報或更多消息 </label>
             </div>
           </div>
         </div>
@@ -297,6 +224,49 @@
       </form>
     </div>
     <!-- footer cantact info fluid -->
+    <div class="container" data-bs-theme="dark">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top bg-dark">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"> </a>
+          <p class="text-body-secondary">© 2024</p>
+        </div>
+
+        <div class="col mb-3"></div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
     <script src="./bootstrap/bootstrap.bundle.min.js"></script>
   </body>
